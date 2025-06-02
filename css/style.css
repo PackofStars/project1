@@ -4,7 +4,20 @@
   font-style: normal;
 }
 body{
-  background-color: #000;
+  background-color: #2d0635;
+}
+h1{
+  text-align: center;
+  clear: both;
+}
+h4{
+  text-align: center;
+}
+img{
+  float: left;
+}
+iframe{
+  float: right;
 }
 #page_wrapper{
   width: 960px;
@@ -48,9 +61,95 @@ ul#navigation li a:hover {
   background-color: #000;
   color: #fff;
 }
-h1{
+                  /* Landing Page Styles */
+div#orbImage{
+  width: 410px;
+  height: 273px;
+  background-image: url(../images/stoneorbs.jpg);
+  float: right;
+  margin-left: .1em;
+}
+a.readmore{
+  color: #2d0635;
+  font-size: 1.2em;
+  font-weight: 600;
+  display: block;
+  width: fit-content;
+  margin: auto;
+  text-decoration: underline;
+  padding-bottom: .2em;
+}
+p.subtext{
+  font-size: 0.9em;
+  font-style: italic;
+  color: #2d0635;
   text-align: center;
+  margin: auto;
+  padding: 0;
+  width: fit-content;
+  transition: all 5s ease;
+}
+p.subtext:hover{
+  color: #2d063500;
+  transition: all 2s ease;
+}
+p.subtext:hover::after{
+  content: " disappear...";
+}
+h1.landing{
+  font-size: 2.5em;
+  color: #2d0635;
+  text-align: center;
+  text-decoration: wavy;
+  margin: auto;
+  padding: 0;
+  width: fit-content;
+  transition: all 5s ease;
+}
+h1.landing:hover{
+  color: #2d063500;
+  transition: all 2s ease;
+}
+h1.landing:hover::before{
+  content: "It's a MAGIC  ";
+}
+div#introductory{
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  background: linear-gradient(90deg,rgba(45, 6, 53, 1) 0%, rgba(255, 255, 255, 0.8) 12%, rgba(255, 255, 255, 0.77) 88%, rgba(45, 6, 53, 1) 100%);
+}
+#introductory .boundingbox{
+  width: 75%;
+  margin: auto;
+}
+.imagebox{
+  width: 98%;
+  box-sizing: border-box;
+  margin: auto;
+  margin-bottom: .1em;
+  padding: .5em;
+  padding-right: .1em;
+  display: block;
+  border-top: #000000b0 solid 1px;
+  border-bottom: #000000b0 solid 1px;
+}
+img.alequalize{
+    float: right;
+    margin-left: .1em;
+}
+.imagebox::after { /* clearfix */
+  content: "";
+  display: table;
   clear: both;
+}
+.imagebox p{
+  max-width: 100%;
+  margin: 0;
+}
+  /* Resume Styles */
+body.fixed{
+  background-color: #000;
 }
 .content{
   display: flex;
@@ -98,6 +197,7 @@ h1{
   font-weight: 700;
 }
 .resume h4{
+  text-align: left;
   margin: 0;
   padding: 0;
   font-size: 1em;
@@ -149,5 +249,58 @@ footer{
   border: 0px solid;
   background-color: #000;
 }
+  /* Dan page Styles */
 
-  
+
+
+
+
+
+
+
+
+
+    /* Responsive Styles */
+@media screen and (min-width: 800px) {
+  .imagebox p{
+    float: left;
+    text-align: left;
+    max-width: 26%;
+    margin: 0;
+    padding-left: .4em;
+  }
+  img.alequalize{
+    margin-left: 45px;
+    margin-right: 45px;
+    float: left;
+  }
+  div#orbImage{
+    width: 410px;
+    height: 273px;
+    background-image: url(../images/stoneorbs.jpg);
+    float: left;
+  }
+  iframe{
+    float: left;
+  }
+}
+
+@media screen and (min-width: 1260px) {
+  .imagebox p{
+    float: left;
+    text-align: left;
+    max-width: 46%;
+    margin: 0;
+    padding-left: .4em;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .imagebox p{
+    float: left;
+    text-align: left;
+    max-width: 70%;
+    margin: 0;
+    padding-left: .4em;
+  }
+}
